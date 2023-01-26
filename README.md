@@ -1,19 +1,17 @@
 # day17-workshop
 Weather Service with REST API
 
-Weather API Docs
-https://openweathermap.org/current
+To build an app to make an API call to OPEN WEATHER MAP for current weather in queried city
 
 
-API call
-https://api.openweathermap.org/data/2.5/weather?lat=<lat>&lon=<lon>&appid=<API key>
-
-
-GOAL
+GOAL: To build url for API call
 https://api.openweathermap.org/data/2.5/weather?q=<city>&appid=<API key>
 
-
 Instructions
-export API_KEY=<API_KEY>
+export OPEN_WEATHER_API_KEY=<API_KEY>
 OR
-insert following pair in railway API_KEY=<API_KEY>
+insert following pair in railway env variables OPEN_WEATHER_API_KEY=<API_KEY>
+
+
+Weather API Docs
+https://openweathermap.org/current
