@@ -1,5 +1,6 @@
 package com.workshop17.weatherApp.controller;
 
+import java.io.IOException;
 import java.security.Timestamp;
 import java.util.Date;
 
@@ -33,7 +34,7 @@ public class WeatherController {
     @GetMapping(path="/weather")
     public String getWeather(@RequestParam(required=false) String city, 
                 @RequestParam(required=false) String units,
-                Model model) {
+                Model model) throws IOException {
         
         // set default values for inputs
         if ((null == city) || (city.equals(""))) {

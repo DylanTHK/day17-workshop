@@ -8,13 +8,13 @@
 </head>
 <body>
     <h1>Current Weather in City</h1>
-    <div>
-        <img src="" alt="">
-        <p>Description: </p>
-        <p>Temperature: </p>
-        <p>Sunrise: </p>
-        <p>Sunset: </p>
-        <p>Time: </p>
+    <div data-th-object="${weather}">
+        <img data-th-src="*{icon}" data-th-alt="*{icon}">
+        <p>City: <span data-th-text="*{city}"></span></p>
+        <p>Description: <span data-th-text="*{description}"></span></p>
+        <p>Temperature: <span data-th-text="*{temp}"></span></p>
+        <p>Humidity: <span data-th-text="*{humidity}"></span></p>
+        <p>Time: <span data-th-text="*{todayTime}"></span></p>
     </div>
 
 </body>

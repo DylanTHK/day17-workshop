@@ -1,5 +1,7 @@
 package com.workshop17.weatherApp.service;
 
+import java.io.IOException;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -14,7 +16,7 @@ public class WeatherService {
     private static final String OPEN_WEATHER_URL = 
             "https://api.openweathermap.org/data/2.5/weather";
     
-    public Weather getWeather(String city, String units) {
+    public Weather getWeather(String city, String units) throws IOException {
         // get api key from environment (requires manual insertion of values - export API_KEY <value>)
         String url = generateURL(city, units);
 
@@ -48,7 +50,7 @@ public class WeatherService {
     public String getResponseBody(String url) {
         // new rest template
         RestTemplate template = new RestTemplate();
-        System.out.println("RestTemplate: " + template);
+        // System.out.println("RestTemplate: " + template);
         // obtain entity by doing get from specific url
         ResponseEntity<String> resp = template.getForEntity(url, String.class);
         String body = resp.getBody();
